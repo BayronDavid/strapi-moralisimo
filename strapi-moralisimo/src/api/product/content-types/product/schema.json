@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Imported products from CSV"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "type": { "type": "string" },
+    "name": { "type": "string", "required": true },
+    "sku": { "type": "string" },
+    "regular_price": { "type": "decimal" },
+    "sale_price": { "type": "decimal" },
+    "manage_stock": { "type": "boolean" },
+    "stock": { "type": "integer" },
+    "backorders": { "type": "string" },
+    "stock_status": { "type": "string" },
+    "categories": { "type": "string" },
+    "tags": { "type": "string" },
+    "short_description": { "type": "text" },
+    "description": { "type": "richtext" },
+    "images": { "type": "json" },
+    "attributes": { "type": "json" },
+    "parent_id": { "type": "string" }
+  }
+}
