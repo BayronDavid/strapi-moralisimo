@@ -4,31 +4,11 @@
   "info": {
     "singularName": "author",
     "pluralName": "authors",
-    "displayName": "Author",
-    "description": "Create authors for your content"
+    "displayName": "REMOVED_EXAMPLE_author",
+    "description": "Placeholder removed example content-type"
   },
-  "options": {
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": { "draftAndPublish": false },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": ["images", "files", "videos"]
-    },
-    "email": {
-      "type": "string"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "author"
-    }
+    "placeholder": { "type": "string" }
   }
 }

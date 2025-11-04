@@ -4,28 +4,11 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "Category",
-    "description": "Organize your content into categories"
+    "displayName": "REMOVED_EXAMPLE_category",
+    "description": "Placeholder removed example content-type"
   },
-  "options": {
-    "draftAndPublish": false
-  },
-  "pluginOptions": {},
+  "options": { "draftAndPublish": false },
   "attributes": {
-    "name": {
-      "type": "string"
-    },
-    "slug": {
-      "type": "uid"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
-    },
-    "description": {
-      "type": "text"
-    }
+    "placeholder": { "type": "string" }
   }
 }

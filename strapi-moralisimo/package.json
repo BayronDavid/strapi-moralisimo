@@ -5,16 +5,11 @@
   "description": "A Strapi application",
   "scripts": {
     "build": "strapi build",
-    "console": "strapi console",
-    "deploy": "strapi deploy",
-    "dev": "strapi develop",
     "develop": "strapi develop",
-    "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
-    "strapi": "strapi",
+    "import:csv": "node ./scripts/import-csv.js",
     "upgrade": "npx @strapi/upgrade latest",
-  "upgrade:dry": "npx @strapi/upgrade latest --dry",
-  "import:csv": "node ./scripts/import-csv.js"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry"
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.30.0",
