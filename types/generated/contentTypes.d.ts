@@ -467,6 +467,52 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiProductProduct extends Struct.CollectionTypeSchema {
+  collectionName: 'products';
+  info: {
+    displayName: 'Product';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    attributes_name: Schema.Attribute.String;
+    attributes_taxonomy: Schema.Attribute.Boolean;
+    attributes_value: Schema.Attribute.String;
+    attributes_visible: Schema.Attribute.Boolean;
+    backorders: Schema.Attribute.String;
+    categories: Schema.Attribute.Text;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Text;
+    images: Schema.Attribute.JSON;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product.product'
+    > &
+      Schema.Attribute.Private;
+    manage_stock: Schema.Attribute.Boolean;
+    name: Schema.Attribute.String;
+    parent_id: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    regular_price: Schema.Attribute.Decimal;
+    sale_price: Schema.Attribute.Decimal;
+    short_description: Schema.Attribute.Text;
+    sku: Schema.Attribute.String & Schema.Attribute.Unique;
+    stock: Schema.Attribute.Integer;
+    stock_status: Schema.Attribute.String;
+    tags: Schema.Attribute.Text;
+    type: Schema.Attribute.Enumeration<['simple', 'variable', 'variation']>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -978,6 +1024,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

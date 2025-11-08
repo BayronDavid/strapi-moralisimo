@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": ["simple", "variable", "variation"]
+    },
+    "name": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string",
+      "unique": true
+    },
+    "regular_price": {
+      "type": "decimal"
+    },
+    "sale_price": {
+      "type": "decimal"
+    },
+    "manage_stock": {
+      "type": "boolean"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "backorders": {
+      "type": "string"
+    },
+    "stock_status": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "text"
+    },
+    "short_description": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "images": {
+      "type": "json"
+    },
+    "attributes_name": {
+      "type": "string"
+    },
+    "attributes_value": {
+      "type": "string"
+    },
+    "attributes_visible": {
+      "type": "boolean"
+    },
+    "attributes_taxonomy": {
+      "type": "boolean"
+    },
+    "parent_id": {
+      "type": "string"
+    }
+  }
+}
