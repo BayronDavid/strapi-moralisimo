@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2025-11-08T02:13:33.636Z"
+    "x-generation-date": "2025-11-10T00:28:43.348Z"
   },
   "x-strapi-config": {
     "plugins": [
@@ -24,8 +24,8 @@
   },
   "servers": [
     {
-      "url": "/api",
-      "description": "API (relative)"
+      "url": "https://strapi-moralisimo.onrender.com/api",
+      "description": "Development server"
     }
   ],
   "externalDocs": {
