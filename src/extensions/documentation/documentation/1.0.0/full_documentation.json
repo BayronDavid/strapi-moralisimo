@@ -24,8 +24,8 @@
   },
   "servers": [
     {
-      "url": "http://localhost:1337/api",
-      "description": "Development server"
+      "url": "/api",
+      "description": "API (relative)"
     }
   ],
   "externalDocs": {

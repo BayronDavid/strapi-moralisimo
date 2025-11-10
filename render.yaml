@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: strapi-moralisimo
+    env: node
+    plan: starter
+    branch: main
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
